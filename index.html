@@ -74,18 +74,22 @@
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-6">
+                <div class="col-6 col-sm-6">
                     <h1>Le Chocolat</h1>
                     <p>We combine experience with creativity to create innovative tastes based on classic chocolate recipes. Our creations will travel you in the chocolate world!</p>
                 </div>
-                <div class="col col-sm-2">
+                <div class="col-3 col-sm-3">
                     <img src="images/logo.png" class="img-fluid">
                 </div>
                  
-                <div class="col-6 col-sm-4">
-                    <p style="padding-left: 5px;"></p>
-                    <a type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" data-html="true" title="Or Call us at <br> <strong>+ 987 6543 2100 </strong>" 
-                        data-placement="bottom" href="#reserve-form"> Reserve your baskets</a>
+                <div class="col-3 col-sm-3">
+                    <p style="padding-left: 5px;"></p>                    
+                    <span class="navbar-text">
+                        <a data-toggle="modal" data-target="#reserveModal">
+                        <button type="submit" data-placement="bottom" class="btn btn-warning btn-sm btn-block">Reserve your baskets</button></a>
+                    </span>
+                    <!-- <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br> <strong>+ 987 6543 2100 </strong>" 
+                        data-placement="bottom" href="#reserve-form"> Reserve your baskets</a> -->
                     
                         <!-- <a class="btn btn-warning btn-sm btn-block" href="#reserve-form" role="button">Reserve your baskets</a> -->
                 </div>
@@ -148,6 +152,7 @@
                 </div>
             </div>
           </div>
+        </div>
 
         <div class="row flex-row-reverse row-content align-items-center">
             <div class="col-sm-4 col-md-3">
@@ -201,16 +206,21 @@
             </div>
         </div>
 
-        <div class="row row-content justify-content-center">        
-            <div class="col-12 col-sm-8 ">        
-                <div class="card border-default">        
-                    <h3 class="card-header bg-warning text-white" id="reserve-form">Reserve your baskets</h3>        
-                    <div class="card-body">
-
+        <div id="reserveModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title col-form-label" style="font-size: x-large;">Reserve your baskets</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times</button>
+                    </div>
+                    <div class="modal-body">
                         <form>        
                             <div class="form-group row">        
-                                <label for="optradio" class="col-12 col-sm-3 col-form-label">Number of baskets</label>        
-                                <div class="col-12 col-sm-9">        
+                                <label for="optradio" class="col-12 col-sm-3 col-form-label">Number of baskets</label> <span></span>
+                                <div class="input-group col-12 col-sm-9">    
+                                    <div class="input-group-prepend"> 
+                                      
                                     <div class="form-check form-check-inline">        
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                         <label class="form-check-label" for="inlineRadio1">1</label>        
@@ -220,29 +230,30 @@
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                         <label class="form-check-label" for="inlineRadio2">2</label>
                                     </div>
-
+        
                                     <div class="form-check form-check-inline">        
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                         <label class="form-check-label" for="inlineRadio3">3</label>        
                                     </div>
-
+        
                                     <div class="form-check form-check-inline">        
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
                                         <label class="form-check-label" for="inlineRadio4">4</label>        
                                     </div>
-
+        
                                     <div class="form-check form-check-inline">        
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
                                         <label class="form-check-label" for="inlineRadio5">5</label>        
                                     </div>
-
+        
                                     <div class="form-check form-check-inline">        
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
                                         <label class="form-check-label" for="inlineRadio6">6</label>        
                                     </div>
-
                                 </div>
                             </div>
+                    </div> <br>
+
                             <div class="form-group row">
                                 <label class="col-12 col-sm-3 col-form-label">Date and Time</label>
                                 <div class="input-group col-12 col-sm-4">
@@ -258,14 +269,41 @@
                                     </div>
                                     <input type="time" class="form-control" placeholder="Time" id="time'">        
                                 </div>        
-                            </div>        
-                            <button type="submit" class="btn btn-primary btn-sm col-sm-offset-2">Reserve</button>        
-                        </form>        
-                    </div>        
-                </div>        
-            </div>        
+                            </div><br>
+                            <!-- <button type="submit" class="btn btn-primary btn-sm col-sm-offset-2">Reserve</button>         -->
+
+                    <div class="form-group row" role="toolbar">
+                        <label for="optradio" class="col-12 col-sm-3 col-form-label">Home Delivery</label>
+                        <div class="col-12 col-sm-9">
+                            <div class="input-group-prepend">
+                    
+                                <div class="btn btn-success btn-sm">
+                                    <input type="radio" id="YesButton" name="Yes" value="Yes" checked>
+                                    <label for="YesButton">Yes</label>
+                                </div>
+                                <div class="btn btn-danger btn-sm">
+                                    <input type="radio" id="NoButton" name="No" value="No">
+                                    <label for="NoButton">No</label>
+                                </div>
+                            </div>
+                    
+                    
+                            <!-- <button type="radio" class="btn btn-success" checked>Yes</button>                                            
+                                <button type="radio" class="btn btn-danger">No</button> -->
+                    
+                    
+                        </div>
+                    </div>
+                </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-light btn-sm" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
     <footer class="footer">
         <div class="container">
@@ -283,8 +321,7 @@
                     <h5>Our Address</h5>
                     <address>
                         121, Clear Wave Road<br>
-                        Clear Wave Road, Aloha<br>
-                        HAWAII<br>
+                        Clear Wave Road, Aloha<br>HAWAII<br>
                         <span class="fa fa-phone fa-lg"></span> +987 6543 2100<br>
                         <span class="fa fa-fax fa-lg"></span> +987 6543 2101<br>
                         <span class="fa fa-envelope fa-lg"></span> <a href="mailto:chocolat@nomail.net">chocolat@nomail.net</a>
@@ -315,11 +352,13 @@
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
+
+    <!-- <script>
         $(function () {
            $('[data-toggle="tooltip"]').tooltip()
          })
-       </script>
+    </script> -->
+
 </body>
 
 </html>
