@@ -8,9 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
+
 </head>
 
 <body>
@@ -26,7 +29,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Menu.html"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
@@ -74,15 +77,15 @@
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-6 col-sm-6">
+                <div class="col-12 col-sm-6">
                     <h1>Le Chocolat</h1>
                     <p>We combine experience with creativity to create innovative tastes based on classic chocolate recipes. Our creations will travel you in the chocolate world!</p>
                 </div>
-                <div class="col-3 col-sm-3">
+                <div class="col col-sm-3">
                     <img src="images/logo.png" class="img-fluid">
                 </div>
                  
-                <div class="col-3 col-sm-3">
+                <div class="col-12 col-sm-3">
                     <p style="padding-left: 5px;"></p>                    
                     <span class="navbar-text">
                         <a data-toggle="modal" data-target="#reserveModal">
@@ -126,13 +129,10 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="images/cartoonVasilis.png" alt="Vasilis Wilson">
+                            <img src="./images/Anita small.jpg" alt="Anita Duka">
                             <div class="carousel-caption d-none d-sm-block">
-                                <h2>Vasilis Wilson
-                                 </h2>
-                                <p class="col d-none d-sm-block">Vasilis is well informed of all the current 
-                                    trends in pastry and contributes his innovative ideas in our products.
-                                </p>
+                                <h2>Anita Duka</h2>
+                                <p class="col d-none d-sm-block">Anita is a highly regarded, professional executive chef with a passion for creating cuisine using fresh, seasonal and local ingredients.</p>
                             </div>
                         </div>                                                
                     </div>
@@ -149,10 +149,19 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+
+                    <div class="btn-group" id="carouselButtons">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                          <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                          <span class="fa fa-play"></span>
+                        </button>
+                    </div>
+
                 </div>
             </div>
-          </div>
-        </div>
+        </div>        
 
         <div class="row flex-row-reverse row-content align-items-center">
             <div class="col-sm-4 col-md-3">
@@ -196,15 +205,16 @@
             </div>
             <div class="col-sm col-md">
                 <div class="media">
-                    <img src="images/cartoonVasilis.png" class="mr-3 img-thumbnail">
+                    <img src="./images/Anita small.jpg" class="mr-3 img-thumbnail">
                     <div class="media-body">
-                        <h2>Vasilis Wilson </h2>
-                        <h4>Sous-chef</h4>
-                        <p class="d-none d-sm-block">Vasilis is well informed of all the current trends in pastry and contributes his innovative ideas in our products.</p>
+                        <h2>Anita Duka </h2>
+                        <h4>Executive Chef</h4>
+                        <p class="d-none d-sm-block">Anita is a highly regarded, professional executive chef with a passion for creating cuisine using fresh, seasonal and local ingredients.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>    
 
         <div id="reserveModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
@@ -286,12 +296,6 @@
                                     <label for="NoButton">No</label>
                                 </div>
                             </div>
-                    
-                    
-                            <!-- <button type="radio" class="btn btn-success" checked>Yes</button>                                            
-                                <button type="radio" class="btn btn-danger">No</button> -->
-                    
-                    
                         </div>
                     </div>
                 </form>
@@ -313,7 +317,7 @@
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
+                        <li><a href="./Menu.html">Menu</a></li>
                         <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
@@ -328,13 +332,13 @@
                     </address>
                 </div>
                 <div class="col col-sm-4 align-self-center">
-                    <div style="text-align:center">
-                        <a class="btn" href="http://google.com/+"><span class="fa fa-google-plus"></span></a>
-                        <a class="btn" href="http://www.facebook.com/profile.php?id="><span class="fa fa-facebook"></span></a>
-                        <a class="btn" href="http://www.linkedin.com/in/"><span class="fa fa-linkedin"></span></a>
-                        <a class="btn" href="http://twitter.com/"><span class="fa fa-twitter"></span></a>
-                        <a class="btn" href="http://youtube.com/"><span class="fa fa-youtube"></span></a>
-                        <a class="btn" href="mailto:"><span class="fa fa-envelope-o"></span></a>
+                    <div class="col-auto" style="text-align:center">
+                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><span class="fa fa-google-plus"></span></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><span class="fa fa-facebook"></span></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><span class="fa fa-linkedin"></span></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><span class="fa fa-twitter"></span></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><span class="fa fa-youtube"></span></a>
+                        <a class="btn btn-social-icon" href="mailto:"><span class="fa fa-envelope-o"></span></a>
                     </div>
                 </div>
             </div>
@@ -348,10 +352,13 @@
 
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 
     <!-- <script>
         $(function () {
