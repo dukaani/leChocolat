@@ -61,3 +61,8 @@ tr:hover {background-color:#dbb08db0!important}
     box-sizing: none; 
     background-color: transparent; 
  }
+ #carouselButtons {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+}
